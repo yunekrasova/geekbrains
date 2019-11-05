@@ -35,7 +35,6 @@ public class MainApp {
         taskList.delTask("Третий");
         taskList.delTask("Первый");
         taskList.printList();
-        taskList.printList();
     }
 
 }
