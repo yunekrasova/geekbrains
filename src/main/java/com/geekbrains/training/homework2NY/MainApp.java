@@ -2,7 +2,7 @@ package com.geekbrains.training.homework2NY;
 
 public class MainApp {
     public static void main(String[] args) {
-         TaskTracker taskList = new TaskTracker();
+        TaskTracker taskList = new TaskTracker();
         taskList.addTask(new Task(1, "Первый", "Владелец1",
                 "Исполнитель1", "Описание1", "Новый"));
         taskList.addTask(new Task(2, "Второй", "Владелец2",
@@ -34,6 +34,7 @@ public class MainApp {
         taskList.delTask(11);
         taskList.delTask("Третий");
         taskList.delTask("Первый");
+        taskList.printList();
         taskList.printList();
     }
 
