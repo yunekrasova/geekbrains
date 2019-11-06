@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43eba50b-5788-4245-83d0-f714349e0412" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework3NY/MainApp.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/TaskService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/UserTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/Task.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/TaskTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/geekbrains/training/homework2NY/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/geekbrains/training/homework2NY/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/geekbrains/training/homework2NY/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/geekbrains/training/homework2NY/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/geekbrains/training/homework2NY/TaskTracker.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -20,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson3" />
+        <entry key="$PROJECT_DIR$" value="lesson2" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,6 +82,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApp" />
+        <item itemvalue="Application.MainApp" />
+        <item itemvalue="Application.MainApp" />
+        <item itemvalue="Application.MainApp" />
+        <item itemvalue="Application.MainApp" />
       </list>
     </recent_temporary>
   </component>
@@ -103,6 +116,17 @@
     </task>
     <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Тест" />

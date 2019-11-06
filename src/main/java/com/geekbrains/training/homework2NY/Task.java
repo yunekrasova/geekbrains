@@ -1,18 +1,14 @@
 package com.geekbrains.training.homework2NY;
-/*cоздайте класс Task (задача).
- У задачи должны быть следующие свойства:
-  id, название, имя владельца задачи, имя исполнителя,
-  описание, статус. */
 
 public class Task {
-    private int idTask;
+    private Long idTask;
     private String nameTask;
     private String ownerTask;
     private String executerTask;
     private String descTask;
     private String statusTask;
 
-    public Task(int idTask, String nameTask, String ownerTask, String executerTask, String descTask, String statusTask) {
+    public Task(Long idTask, String nameTask, String ownerTask, String executerTask, String descTask, String statusTask) {
         this.idTask = idTask;
         this.nameTask = nameTask;
         this.ownerTask = ownerTask;
@@ -21,7 +17,7 @@ public class Task {
         this.statusTask = statusTask;
     }
 
-    public int getIdTask() {
+    public Long getIdTask() {
         return idTask;
     }
 
@@ -31,7 +27,7 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Задача ID:" + idTask + ", название: " + nameTask + ", имя владельца задачи:" + ownerTask + ", имя исполнителя: " + executerTask +
-                ",  описание:" + descTask + ", статуc: " + statusTask + ".";
+        return String.format("Задача ID:%d, название: %s, имя владельца задачи:%s, имя исполнителя: %s, описание: %s, статуc: %s.",
+                idTask, nameTask, ownerTask, executerTask, descTask, statusTask);
     }
 }
