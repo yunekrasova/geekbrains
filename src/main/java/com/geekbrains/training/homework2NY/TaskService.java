@@ -1,5 +1,7 @@
 package com.geekbrains.training.homework2NY;
 
+import com.geekbrains.training.homework2NY.exception.*;
+
 /*Создайте класс TaskTracker, который хранит в себе массив из 10 задач.
 Этот класс должен позволять добавлять задачу в массив. Если весь массив заполнен,
  то при попытке добавить новую задачу в консоль, необходимо вывести сообщение: “Список задач заполнен”.
@@ -16,8 +18,13 @@ public class TaskService {
     }
 
     public void addTask(Task task) {
-        if (!(userTask.addTask(task)))
-        {System.out.println("Список задач заполнен.");}
+        try {
+            userTask.addTask(task);
+        } catch (NoUniqueException e) {
+            System.out.println((e.toString()));
+        } catch (FullTaskException e) {
+            System.out.println((e.toString()));
+        }
     }
 
     public void printListTask() {
@@ -34,13 +41,14 @@ public class TaskService {
     }
 
     public void delTask(String nameTask) {
-        if ( userTask.delTask(nameTask) ) {
+        if (userTask.delTask(nameTask)) {
             System.out.println("Задачи c названием '" + nameTask + "' удалена из списка задач.");
         } else {
             System.out.println("Задачи  c названием '" + nameTask + "' нет в списке задач.");
 
         }
-           }
+
+    }
 
 
 }
