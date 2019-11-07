@@ -2,39 +2,45 @@ package com.geekbrains.training.homework2NY;
 
 public class MainApp {
     public static void main(String[] args) {
-        TaskTracker taskList = new TaskTracker();
-        taskList.addTask(new Task(1, "Первый", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
-        taskList.addTask(new Task(2, "Второй", "Владелец2",
-                "Исполнитель2", "Описание2", "Новый"));
-        taskList.addTask(new Task(3, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
-        taskList.addTask(new Task(4, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
-        taskList.addTask(new Task(5, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
-        taskList.addTask(new Task(6, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
-        taskList.addTask(new Task(7, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
-        taskList.addTask(new Task(8, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
-        taskList.addTask(new Task(9, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
-        taskList.addTask(new Task(10, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
-        taskList.addTask(new Task(11, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
-        taskList.addTask(new Task(12, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
-        taskList.addTask(new Task(13, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
+        TaskService taskList = new TaskService();
 
-        taskList.printList();
-        taskList.delTask(11);
+        taskList.addTask(new Task(1L, "Первый", "Владелец1",
+                "Исполнитель1", "Описание1", "Новый"));
+        taskList.addTask(new Task(2L, "Второй", "Владелец2",
+                "Исполнитель2", "Описание2", "Новый"));
+        taskList.addTask(new Task(3L, "Третий", "Владелец1",
+                "Исполнитель1", "Описание1", "Новый"));
+        taskList.addTask(new Task(4L, "Третий", "Владелец1",
+                "Исполнитель1", "Описание1", "Новый"));
+        taskList.addTask(new Task(5L, "Третий", "Владелец1",
+                "Исполнитель1", "Описание1", "Новый"));
+        taskList.addTask(new Task(6L, "Третий", "Владелец1",
+                "Исполнитель1", "Описание1", "Новый"));
+        taskList.addTask(new Task(7L, "Третий", "Владелец1",
+                "Исполнитель1", "Описание1", "Новый"));
+        taskList.addTask(new Task(8L, "Третий", "Владелец1",
+                "Исполнитель1", "Описание1", "Новый"));
+        taskList.addTask(new Task(9L, "Третий", "Владелец1",
+                "Исполнитель1", "Описание1", "Новый"));
+        taskList.addTask(new Task(10L, "Десять", "Владелец1",
+                "Исполнитель1", "Описание1", "Новый"));
+        taskList.addTask(new Task(11L, "Третий", "Владелец1",
+                "Исполнитель1", "Описание1", "Новый"));
+        taskList.addTask(new Task(12L, "Третий", "Владелец1",
+                "Исполнитель1", "Описание1", "Новый"));
+        taskList.addTask(new Task(13L, "Одинадцать", "Владелец1",
+                "Исполнитель1", "Описание1", "Новый"));
+        System.out.println("------------------------");
+
+        taskList.printListTask();
+        System.out.println("------------------------");
+
+        taskList.delTask(11L);
         taskList.delTask("Третий");
         taskList.delTask("Первый");
-        taskList.printList();
-    }
+        System.out.println("------------------------");
 
+        taskList.printListTask();
+    }
 }
+
