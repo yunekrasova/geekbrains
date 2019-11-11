@@ -10,5 +10,4 @@ public class Apple extends Fruit {
     public float Weight() {
         return Weight;
     }
-
 }
