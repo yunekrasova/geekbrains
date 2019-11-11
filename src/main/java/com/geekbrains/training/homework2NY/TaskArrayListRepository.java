@@ -1,22 +1,24 @@
 package com.geekbrains.training.homework2NY;
 
 import com.geekbrains.training.homework2NY.exception.*;
+import java.util.ArrayList;
 
-public class TaskRepository implements UserTask {
-    private Task[] listTask;
+public class TaskArrayListRepository implements UserTask {
+    private ArrayList<Task> arrayListTask;
 
-    public TaskRepository() {
+    public TaskArrayListRepository() {
         prepareTask();
     }
 
     @Override
     public void prepareTask() {
-        listTask = new Task[10];
+        arrayListTask = new ArrayList<>();
+        arrayListTask.toArray();
     }
 
-    public boolean chekUniq(Task taskOne, Task[] tasks) {
-        for (int i = 0; i < tasks.length; i++) {
-            if (taskOne.equals(tasks[i])) {
+    public boolean chekUniq(Task taskOne, ArrayList<Task> tasks) {
+        for (int i = 0; i < tasks.size(); i++) {
+            if (taskOne.equals(tasks.get(i))) {
                 return false;
             }
         }
@@ -25,27 +27,21 @@ public class TaskRepository implements UserTask {
 
     @Override
     public void addTask(Task task) {
-        if (chekUniq(task, listTask)) {
-            for (int i = 0; i < listTask.length; i++) {
-                if (listTask[i] == null) {
-                    listTask[i] = task;
-                    break;
-                }
+        if (chekUniq(task, arrayListTask)) {
+            if (!(arrayListTask.add(task))) {
+                throw new FullTaskArrayListException();
             }
         } else {
             throw new NoUniqueException(task.getIdTask());
         }
-        throw new FullTaskException();
     }
 
 
     @Override
     public String printListTask() {
         String textTask = "";
-        for (Task t : listTask) {
-            if (t != null) {
-                textTask += t + "\n";
-            }
+        for (Task t : arrayListTask) {
+            textTask += t + "\n";
         }
         return textTask;
     }
@@ -54,9 +50,9 @@ public class TaskRepository implements UserTask {
     @Override
     public boolean delTask(Long numTask) {
 
-        for (int i = 0; i < listTask.length; i++) {
-            if (listTask[i] != null && listTask[i].getIdTask().equals(numTask)) {
-                listTask[i] = null;
+        for (int i = 0; i < arrayListTask.size(); i++) {
+            if (arrayListTask.get(i).getIdTask().equals(numTask)) {
+                arrayListTask.remove(i);
                 return true;//так как у нас проверка на уникальность Id при добавлении, то удаляем первый встречанный
             }
         }
@@ -66,14 +62,13 @@ public class TaskRepository implements UserTask {
     @Override
     public boolean delTask(String nameTask) {
         boolean res = false;
-
-        for (int i = 0; i < listTask.length; i++) {
-            if (listTask[i] != null && listTask[i].getNameTask().equals(nameTask)) {
-                listTask[i] = null;
+        for (int i = 0; i <  arrayListTask.size(); i++) {
+            if (arrayListTask.get(i).getNameTask().equals(nameTask)) {
+                arrayListTask.remove(i);
+                i-=1;
                 res = true;
             }
         }
         return res;
     }
 }
-

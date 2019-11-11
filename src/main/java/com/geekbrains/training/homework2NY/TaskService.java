@@ -7,7 +7,8 @@ import com.geekbrains.training.homework2NY.exception.*;
  то при попытке добавить новую задачу в консоль, необходимо вывести сообщение: “Список задач заполнен”.
  */
 public class TaskService {
-    UserTask userTask = new TaskRepository();
+ //   UserTask userTask = new TaskRepository();
+ UserTask userTask = new TaskArrayListRepository();
 
     public void TaskService() {
         prepareTask();
@@ -36,7 +37,6 @@ public class TaskService {
             System.out.println("Задачи с ID=" + numTask + " удалена из списка задач.");
         } else {
             System.out.println("Задачи с ID=" + numTask + " нет в списке задач.");
-
         }
     }
 
@@ -45,7 +45,6 @@ public class TaskService {
             System.out.println("Задачи c названием '" + nameTask + "' удалена из списка задач.");
         } else {
             System.out.println("Задачи  c названием '" + nameTask + "' нет в списке задач.");
-
         }
 
     }
