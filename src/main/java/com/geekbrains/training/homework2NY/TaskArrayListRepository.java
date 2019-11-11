@@ -1,7 +1,9 @@
 package com.geekbrains.training.homework2NY;
 
 import com.geekbrains.training.homework2NY.exception.*;
+
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class TaskArrayListRepository implements UserTask {
     private ArrayList<Task> arrayListTask;
@@ -46,7 +48,6 @@ public class TaskArrayListRepository implements UserTask {
         return textTask;
     }
 
-
     @Override
     public boolean delTask(Long numTask) {
 
@@ -62,12 +63,19 @@ public class TaskArrayListRepository implements UserTask {
     @Override
     public boolean delTask(String nameTask) {
         boolean res = false;
-        for (int i = 0; i <  arrayListTask.size(); i++) {
+        for (Iterator<Task> iter = arrayListTask.iterator(); iter.hasNext(); ) {
+            Task task = iter.next();
+            if (task.getNameTask().equals(nameTask)) {
+                iter.remove();
+                res = true;
+            }
+       /* for (int i = 0; i <  arrayListTask.size(); i++) {
             if (arrayListTask.get(i).getNameTask().equals(nameTask)) {
                 arrayListTask.remove(i);
                 i-=1;
                 res = true;
             }
+        }*/
         }
         return res;
     }

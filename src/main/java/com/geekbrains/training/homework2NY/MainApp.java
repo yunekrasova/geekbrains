@@ -16,23 +16,25 @@ public class MainApp {
             System.out.println("Апельсин добавлен");
         }
 
-     //   boxApp1.addFruitToBox(apple);
+        boxApp1.addFruitToBox(apple);
+        boxApp1.addFruitToBox(apple);
         boxApp2.addFruitToBox(apple);
 
         System.out.println(boxApp1.getWeight());
-        System.out.println(apple.Weight());
+        System.out.println(boxApp2.getWeight());
 
         if (boxApp1.compare(boxApp2)) {
             System.out.println("Коробки одинакого веса");
         } else {
             System.out.println("Коробки разного веса");
         }
-
+        
+        System.out.println("------------------------");
       /*  WorkWithArray myArr = new WorkWithArray();
         String[][] Array4x4 =  {{"1", "2", "3","d"}, {"1", "2", "3", "4"}, {"1", "2", "3", "4"}, {"1", "2", "3", "4"}};
         System.out.println(myArr.checkWorkWithArray(Array4x4));
 */
-      /*
+
         TaskService taskList = new TaskService();
 
         taskList.addTask(new Task(1L, "Первый", "Владелец1",
@@ -74,7 +76,7 @@ public class MainApp {
 
         taskList.printListTask();
 
-       */
+
     }
 }
 

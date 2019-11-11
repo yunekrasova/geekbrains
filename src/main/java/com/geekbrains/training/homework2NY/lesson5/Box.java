@@ -24,7 +24,7 @@ public class Box<T extends Fruit> {
 
     public float getWeight() {
         if (boxFruit.size() > 0) {
-            return boxFruit.size() * boxFruit.get(0).Weight();
+            return boxFruit.size() * boxFruit.get(0).Weight;
         }
         return 0.0f;
     }
