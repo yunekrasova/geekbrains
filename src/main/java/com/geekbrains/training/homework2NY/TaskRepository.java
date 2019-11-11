@@ -1,5 +1,7 @@
 package com.geekbrains.training.homework2NY;
 
+import com.geekbrains.training.homework2NY.exception.*;
+
 public class TaskRepository implements UserTask {
     private Task[] listTask;
 
@@ -12,16 +14,30 @@ public class TaskRepository implements UserTask {
         listTask = new Task[10];
     }
 
-    @Override
-    public boolean addTask(Task task) {
-        for (int i = 0; i < listTask.length; i++) {
-            if (listTask[i] == null) {
-                listTask[i] = task;
-                return true;
+    public boolean chekUniq(Task taskOne, Task[] tasks) {
+        for (int i = 0; i < tasks.length; i++) {
+            if (taskOne.equals(tasks[i])) {
+                return false;
             }
         }
-     return false;
+        return true;
     }
+
+    @Override
+    public void addTask(Task task) {
+        if (chekUniq(task, listTask)) {
+            for (int i = 0; i < listTask.length; i++) {
+                if (listTask[i] == null) {
+                    listTask[i] = task;
+                    break;
+                }
+            }
+        } else {
+            throw new NoUniqueException(task.getIdTask());
+        }
+        throw new FullTaskException();
+    }
+
 
     @Override
     public String printListTask() {

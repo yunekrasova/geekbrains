@@ -30,4 +30,15 @@ public class Task {
         return String.format("Задача ID:%d, название: %s, имя владельца задачи:%s, имя исполнителя: %s, описание: %s, статуc: %s.",
                 idTask, nameTask, ownerTask, executerTask, descTask, statusTask);
     }
+
+    @Override
+    public boolean equals(Object o) {
+
+       if (o == null || !(o instanceof Task)) {
+            return false;
+        } ;
+        return ((Task) o).getIdTask().equals(this.idTask);
+
+    }
+
 }
