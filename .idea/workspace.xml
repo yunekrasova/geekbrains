@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43eba50b-5788-4245-83d0-f714349e0412" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson6/SetWord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson6/PhoneBook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson6/SetWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson6/SetWord.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573574677800</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Домашнее задание по уроку 6( часть 1).">
+      <created>1573592255593</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573592255593</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +206,7 @@
     <MESSAGE value="Домашнее задание по уроку 4." />
     <MESSAGE value="Домашнее задание по уроку 5." />
     <MESSAGE value="Домашнее задание по уроку 5(с исправлениями)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Домашнее задание по уроку 5(с исправлениями)." />
+    <MESSAGE value="Домашнее задание по уроку 6( часть 1)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Домашнее задание по уроку 6( часть 1)." />
   </component>
 </project>
