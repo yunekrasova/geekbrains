@@ -28,7 +28,7 @@ public class MainApp {
         } else {
             System.out.println("Коробки разного веса");
         }
-        
+
         System.out.println("------------------------");
       /*  WorkWithArray myArr = new WorkWithArray();
         String[][] Array4x4 =  {{"1", "2", "3","d"}, {"1", "2", "3", "4"}, {"1", "2", "3", "4"}, {"1", "2", "3", "4"}};

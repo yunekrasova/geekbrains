@@ -4,11 +4,11 @@
     <list default="true" id="43eba50b-5788-4245-83d0-f714349e0412" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/TaskArrayListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/TaskArrayListRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Apple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Box.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Fruit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Fruit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Orange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Orange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/geekbrains/training/homework2NY/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/geekbrains/training/homework2NY/MainApp.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573450246994</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Домашнее задание по уроку 5(с исправлениями).">
+      <created>1573452737798</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573452737798</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
