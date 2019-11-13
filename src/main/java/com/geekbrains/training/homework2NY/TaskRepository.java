@@ -53,15 +53,14 @@ public class TaskRepository implements UserTask {
 
     @Override
     public boolean delTask(Long numTask) {
-        boolean res = false;
 
         for (int i = 0; i < listTask.length; i++) {
             if (listTask[i] != null && listTask[i].getIdTask().equals(numTask)) {
                 listTask[i] = null;
-                res = true;
+                return true;//так как у нас проверка на уникальность Id при добавлении, то удаляем первый встречанный
             }
         }
-        return res;
+        return false;
     }
 
     @Override

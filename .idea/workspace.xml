@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43eba50b-5788-4245-83d0-f714349e0412" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/exception/FullTaskException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/exception/NoUniqueException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson4/MyArrayDataException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson4/MyArraySizeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson4/WorkWithArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/Task.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/Task.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/UserTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/UserTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Apple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Apple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Box.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Box.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Fruit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Fruit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Orange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/geekbrains/training/homework2NY/lesson5/Orange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/geekbrains/training/homework2NY/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/geekbrains/training/homework2NY/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/geekbrains/training/homework2NY/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/geekbrains/training/homework2NY/Task.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson3" />
+        <entry key="$PROJECT_DIR$" value="lesson4" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -138,7 +132,35 @@
       <option name="project" value="LOCAL" />
       <updated>1573018665228</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Домашнее задание по уроку 4.">
+      <created>1573156304094</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573156304094</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Домашнее задание по уроку 5.">
+      <created>1573449846443</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573449846444</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Домашнее задание по уроку 5(с исправлениями).">
+      <created>1573450246994</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1573450246994</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Домашнее задание по уроку 5(с исправлениями).">
+      <created>1573452737798</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573452737798</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +180,9 @@
     <MESSAGE value="Тест" />
     <MESSAGE value="Урок 3. Создание." />
     <MESSAGE value="Домашнее задание по уроку 3." />
-    <option name="LAST_COMMIT_MESSAGE" value="Домашнее задание по уроку 3." />
+    <MESSAGE value="Домашнее задание по уроку 4." />
+    <MESSAGE value="Домашнее задание по уроку 5." />
+    <MESSAGE value="Домашнее задание по уроку 5(с исправлениями)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Домашнее задание по уроку 5(с исправлениями)." />
   </component>
 </project>
