@@ -2,6 +2,8 @@ package com.geekbrains.training.homework2NY;
 
 import com.geekbrains.training.homework2NY.exception.*;
 
+import java.util.ArrayList;
+
 public class TaskRepository implements UserTask {
     private Task[] listTask;
 
@@ -74,6 +76,10 @@ public class TaskRepository implements UserTask {
             }
         }
         return res;
+    }
+    @Override
+    public ArrayList<Task> getArrayListTask() {
+        return  new ArrayList<Task>();
     }
 }
 

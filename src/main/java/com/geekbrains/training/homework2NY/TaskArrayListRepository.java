@@ -69,14 +69,12 @@ public class TaskArrayListRepository implements UserTask {
                 iter.remove();
                 res = true;
             }
-       /* for (int i = 0; i <  arrayListTask.size(); i++) {
-            if (arrayListTask.get(i).getNameTask().equals(nameTask)) {
-                arrayListTask.remove(i);
-                i-=1;
-                res = true;
-            }
-        }*/
         }
         return res;
+    }
+
+    @Override
+    public ArrayList<Task> getArrayListTask() {
+        return arrayListTask;
     }
 }
