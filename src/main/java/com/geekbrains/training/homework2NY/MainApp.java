@@ -2,10 +2,13 @@ package com.geekbrains.training.homework2NY;
 
 import com.geekbrains.training.homework2NY.lesson4.*;
 import com.geekbrains.training.homework2NY.lesson5.*;
+import com.sun.source.tree.NewArrayTree;
+
+import java.util.List;
 
 public class MainApp {
     public static void main(String[] args) {
-        Box<Apple> boxApp1 = new Box<>();
+        /*   Box<Apple> boxApp1 = new Box<>();
         Box<Apple> boxApp2 = new Box<>();
         Box<Orange> boxOrn1 = new Box<>();
         Box<Orange> boxOrn2 = new Box<>();
@@ -28,7 +31,7 @@ public class MainApp {
         } else {
             System.out.println("Коробки разного веса");
         }
-
+*/
         System.out.println("------------------------");
       /*  WorkWithArray myArr = new WorkWithArray();
         String[][] Array4x4 =  {{"1", "2", "3","d"}, {"1", "2", "3", "4"}, {"1", "2", "3", "4"}, {"1", "2", "3", "4"}};
@@ -38,34 +41,63 @@ public class MainApp {
         TaskService taskList = new TaskService();
 
         taskList.addTask(new Task(1L, "Первый", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
+                "Исполнитель1", "Описание1", Task.StatusTask.NEW));
         taskList.addTask(new Task(1L, "Второй", "Владелец2",
-                "Исполнитель2", "Описание2", "Новый"));
+                "Исполнитель2", "Описание2",  Task.StatusTask.NEW));
         taskList.addTask(new Task(3L, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
+                "Исполнитель1", "Описание1",  Task.StatusTask.NEW));
         taskList.addTask(new Task(4L, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
+                "Исполнитель1", "Описание1",  Task.StatusTask.CLOSE));
         taskList.addTask(new Task(5L, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
+                "Исполнитель1", "Описание1", Task.StatusTask.INWORK));
         taskList.addTask(new Task(6L, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
+                "Исполнитель1", "Описание1", Task.StatusTask.INWORK));
         taskList.addTask(new Task(7L, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
+                "Исполнитель1", "Описание1",  Task.StatusTask.NEW));
         taskList.addTask(new Task(8L, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
+                "Исполнитель1", "Описание1",  Task.StatusTask.NEW));
         taskList.addTask(new Task(9L, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
+                "Исполнитель1", "Описание1",  Task.StatusTask.NEW));
         taskList.addTask(new Task(10L, "Десять", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
+                "Исполнитель1", "Описание1", Task.StatusTask.CLOSE));
         taskList.addTask(new Task(11L, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
+                "Исполнитель1", "Описание1",  Task.StatusTask.NEW));
         taskList.addTask(new Task(12L, "Третий", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
+                "Исполнитель1", "Описание1", Task.StatusTask.CLOSE));
         taskList.addTask(new Task(13L, "Одинадцать", "Владелец1",
-                "Исполнитель1", "Описание1", "Новый"));
+                "Исполнитель1", "Описание1", Task.StatusTask.CLOSE));
         System.out.println("------------------------");
 
-        taskList.printListTask();
+        Task.StatusTask myStatus= Task.StatusTask.NEW;
+        System.out.println("Список задач со статусом '"+myStatus.getTitle()+"':");
+        List<Task> taskListByStatus = taskList.TaskListByStatus(myStatus);
+
+        for (Task i : taskListByStatus) {
+            System.out.println(i);
+        }
+
+        System.out.println("------------------------");
+
+        Long myId = 16L;
+        if (taskList.CheckForIDTaskList(myId))
+        {
+            System.out.println("Задача с ID="+myId+" существует");
+        }
+        else {System.out.println("Задача с ID="+myId+" не существует");}
+
+        System.out.println("------------------------");
+
+        List<Task> sortTaskList =taskList.SortByStatusTaskList();
+
+        System.out.println("Список задач, отсортированных по статусу:");
+        for (Task j : sortTaskList) {
+            System.out.println(j);
+        }
+
+        System.out.println("------------------------");
+        System.out.println("Количество задач со статусом '"+myStatus+"' равно "+taskList.CountTaskByStatus(myStatus));
+
+     /*   taskList.printListTask();
         System.out.println("------------------------");
 
         taskList.delTask(10L);
@@ -75,6 +107,8 @@ public class MainApp {
         System.out.println("------------------------");
 
         taskList.printListTask();
+
+ */
 
 
     }
