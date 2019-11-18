@@ -95,6 +95,7 @@ public class TaskService {
     }
 
     public void importListTaskToFile(String inNameFile) {
+        /*чуть позже доделаю распарсивание строки и запись в Task*/
         File inFile = new File(inNameFile);
         String lineTask;
 
