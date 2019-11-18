@@ -66,6 +66,10 @@ public class Task {
         }
         ;
         return ((Task) o).getIdTask().equals(this.idTask);
+    }
 
+    public String toStringDataTask() {
+        return String.format("ID:%d, название:%s, владелец:%s, имя исполнителя:%s, описание:%s, статуc:%s",
+                idTask, nameTask, ownerTask, executerTask, descTask, statusTask);
     }
 }

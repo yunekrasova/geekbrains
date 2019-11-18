@@ -4,6 +4,7 @@ import com.geekbrains.training.homework2NY.exception.*;
 
 import java.io.*;
 import java.util.List;
+import java.util.regex.Pattern;
 import java.util.stream.*;
 
 /*Создайте класс TaskTracker, который хранит в себе массив из 10 задач.
@@ -85,7 +86,7 @@ public class TaskService {
         }
         try (BufferedWriter out = new BufferedWriter(new FileWriter(outFile))) {
             for (Task t : allTaskList) {
-                out.write(t.toString() + "\n");
+                out.write(t.toStringDataTask() + "\n");
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -98,13 +99,18 @@ public class TaskService {
         /*чуть позже доделаю распарсивание строки и запись в Task*/
         File inFile = new File(inNameFile);
         String lineTask;
-
+        String[] stroka ;
+        String idTask;
         try (BufferedReader in = new BufferedReader(new FileReader(inFile))) {
             lineTask = in.readLine();
+            Pattern pat = Pattern.compile(":|,");
+
             while (lineTask != null) {
-                System.out.println(lineTask);
+                stroka = pat.split(lineTask);
+                idTask = stroka[1].trim()+"1";
+                this.addTask(new Task(Long.parseLong(idTask), stroka[3].trim(), stroka[5].trim(), stroka[7].trim(),
+                        stroka[9].trim(), Task.StatusTask.valueOf(stroka[11].trim())));
                 lineTask = in.readLine();
-                System.out.println(lineTask);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();

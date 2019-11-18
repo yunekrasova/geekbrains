@@ -38,7 +38,7 @@ public class MainApp {
 
         taskList.addTask(new Task(1L, "Первый", "Владелец1",
                 "Исполнитель1", "Описание1", Task.StatusTask.NEW));
-        taskList.addTask(new Task(1L, "Второй", "Владелец2",
+        taskList.addTask(new Task(2L, "Второй", "Владелец2",
                 "Исполнитель2", "Описание2",  Task.StatusTask.NEW));
         taskList.addTask(new Task(3L, "Третий", "Владелец1",
                 "Исполнитель1", "Описание1",  Task.StatusTask.NEW));
@@ -65,14 +65,15 @@ public class MainApp {
         System.out.println("------------------------");
 
         String fileName = "tasklist.txt";
-     /*   if (taskList.exportListTaskToFile(fileName))
+        if (taskList.exportListTaskToFile(fileName))
         {
             System.out.println("Все задачи записаны в файл " +fileName);
         }
         else {System.out.println("Система не смогла записать задачи в файл с именем "+fileName+". Скорее всего такой файл уже существует.");}
-        */
 
         taskList.importListTaskToFile(fileName);
+        System.out.println("------------------------");
+        taskList.printListTask();
 
   /*      Task.StatusTask myStatus= Task.StatusTask.NEW;
         System.out.println("Список задач со статусом '"+myStatus.getTitle()+"':");
