@@ -1,7 +1,6 @@
 package com.geekbrains.training.homework2NY;
 
 import com.geekbrains.training.homework2NY.exception.*;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 

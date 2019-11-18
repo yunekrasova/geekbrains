@@ -68,6 +68,4 @@ public class Task {
         return ((Task) o).getIdTask().equals(this.idTask);
 
     }
-
-
 }

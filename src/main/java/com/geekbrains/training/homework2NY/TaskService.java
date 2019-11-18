@@ -2,7 +2,7 @@ package com.geekbrains.training.homework2NY;
 
 import com.geekbrains.training.homework2NY.exception.*;
 
-import java.util.Comparator;
+import java.io.*;
 import java.util.List;
 import java.util.stream.*;
 
@@ -53,27 +53,63 @@ public class TaskService {
 
     }
 
-    public List<Task> TaskListByStatus(Task.StatusTask statusTask) {
+    public List<Task> taskListByStatus(Task.StatusTask statusTask) {
         return userTask.getArrayListTask().stream()
                 .filter(task -> task.getStatusTask().equals(statusTask))
                 .collect(Collectors.toList());
     }
 
-    public boolean CheckForIDTaskList(Long idTask) {
+    public boolean checkForIdTaskList(Long idTask) {
         return userTask.getArrayListTask().stream()
                 .anyMatch(task -> task.getIdTask().equals(idTask));
     }
 
-    public List<Task> SortByStatusTaskList() {
+    public List<Task> sortByStatusTaskList() {
         return userTask.getArrayListTask().stream()
                 .sorted((s1, s2) -> s1.getStatusTask().getRang() - s2.getStatusTask().getRang())
                 .collect(Collectors.toList());
     }
 
-    public long  CountTaskByStatus(Task.StatusTask statusTask) {
+    public long countTaskByStatus(Task.StatusTask statusTask) {
         return userTask.getArrayListTask().stream()
                 .filter(task -> task.getStatusTask().equals(statusTask))
                 .count();
+    }
+
+    public boolean exportListTaskToFile(String outNameFile) {
+        File outFile = new File(outNameFile);
+        List<Task> allTaskList = userTask.getArrayListTask().stream().collect(Collectors.toList());
+
+        if (outFile.exists()) {
+            return false;
+        }
+        try (BufferedWriter out = new BufferedWriter(new FileWriter(outFile))) {
+            for (Task t : allTaskList) {
+                out.write(t.toString() + "\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public void importListTaskToFile(String inNameFile) {
+        File inFile = new File(inNameFile);
+        String lineTask;
+
+        try (BufferedReader in = new BufferedReader(new FileReader(inFile))) {
+            lineTask = in.readLine();
+            while (lineTask != null) {
+                System.out.println(lineTask);
+                lineTask = in.readLine();
+                System.out.println(lineTask);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
