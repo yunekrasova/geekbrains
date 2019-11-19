@@ -1,9 +1,5 @@
 package com.geekbrains.training.homework2NY;
 
-import com.geekbrains.training.homework2NY.lesson4.*;
-import com.geekbrains.training.homework2NY.lesson5.*;
-import com.sun.source.tree.NewArrayTree;
-
 import java.util.List;
 
 public class MainApp {
@@ -42,7 +38,7 @@ public class MainApp {
 
         taskList.addTask(new Task(1L, "Первый", "Владелец1",
                 "Исполнитель1", "Описание1", Task.StatusTask.NEW));
-        taskList.addTask(new Task(1L, "Второй", "Владелец2",
+        taskList.addTask(new Task(2L, "Второй", "Владелец2",
                 "Исполнитель2", "Описание2",  Task.StatusTask.NEW));
         taskList.addTask(new Task(3L, "Третий", "Владелец1",
                 "Исполнитель1", "Описание1",  Task.StatusTask.NEW));
@@ -68,9 +64,20 @@ public class MainApp {
                 "Исполнитель1", "Описание1", Task.StatusTask.CLOSE));
         System.out.println("------------------------");
 
-        Task.StatusTask myStatus= Task.StatusTask.NEW;
+        String fileName = "tasklist.txt";
+        if (taskList.exportListTaskToFile(fileName))
+        {
+            System.out.println("Все задачи записаны в файл " +fileName);
+        }
+        else {System.out.println("Система не смогла записать задачи в файл с именем "+fileName+". Скорее всего такой файл уже существует.");}
+
+        taskList.importListTaskToFile(fileName);
+        System.out.println("------------------------");
+        taskList.printListTask();
+
+  /*      Task.StatusTask myStatus= Task.StatusTask.NEW;
         System.out.println("Список задач со статусом '"+myStatus.getTitle()+"':");
-        List<Task> taskListByStatus = taskList.TaskListByStatus(myStatus);
+        List<Task> taskListByStatus = taskList.taskListByStatus(myStatus);
 
         for (Task i : taskListByStatus) {
             System.out.println(i);
@@ -79,7 +86,7 @@ public class MainApp {
         System.out.println("------------------------");
 
         Long myId = 16L;
-        if (taskList.CheckForIDTaskList(myId))
+        if (taskList.checkForIdTaskList(myId))
         {
             System.out.println("Задача с ID="+myId+" существует");
         }
@@ -87,7 +94,7 @@ public class MainApp {
 
         System.out.println("------------------------");
 
-        List<Task> sortTaskList =taskList.SortByStatusTaskList();
+        List<Task> sortTaskList =taskList.sortByStatusTaskList();
 
         System.out.println("Список задач, отсортированных по статусу:");
         for (Task j : sortTaskList) {
@@ -95,8 +102,8 @@ public class MainApp {
         }
 
         System.out.println("------------------------");
-        System.out.println("Количество задач со статусом '"+myStatus+"' равно "+taskList.CountTaskByStatus(myStatus));
-
+        System.out.println("Количество задач со статусом '"+myStatus+"' равно "+taskList.countTaskByStatus(myStatus));
+*/
      /*   taskList.printListTask();
         System.out.println("------------------------");
 

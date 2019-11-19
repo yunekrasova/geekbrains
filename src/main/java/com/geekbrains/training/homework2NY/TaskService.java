@@ -2,8 +2,9 @@ package com.geekbrains.training.homework2NY;
 
 import com.geekbrains.training.homework2NY.exception.*;
 
-import java.util.Comparator;
+import java.io.*;
 import java.util.List;
+import java.util.regex.Pattern;
 import java.util.stream.*;
 
 /*Создайте класс TaskTracker, который хранит в себе массив из 10 задач.
@@ -53,27 +54,69 @@ public class TaskService {
 
     }
 
-    public List<Task> TaskListByStatus(Task.StatusTask statusTask) {
+    public List<Task> taskListByStatus(Task.StatusTask statusTask) {
         return userTask.getArrayListTask().stream()
                 .filter(task -> task.getStatusTask().equals(statusTask))
                 .collect(Collectors.toList());
     }
 
-    public boolean CheckForIDTaskList(Long idTask) {
+    public boolean checkForIdTaskList(Long idTask) {
         return userTask.getArrayListTask().stream()
                 .anyMatch(task -> task.getIdTask().equals(idTask));
     }
 
-    public List<Task> SortByStatusTaskList() {
+    public List<Task> sortByStatusTaskList() {
         return userTask.getArrayListTask().stream()
                 .sorted((s1, s2) -> s1.getStatusTask().getRang() - s2.getStatusTask().getRang())
                 .collect(Collectors.toList());
     }
 
-    public long  CountTaskByStatus(Task.StatusTask statusTask) {
+    public long countTaskByStatus(Task.StatusTask statusTask) {
         return userTask.getArrayListTask().stream()
                 .filter(task -> task.getStatusTask().equals(statusTask))
                 .count();
+    }
+
+    public boolean exportListTaskToFile(String outNameFile) {
+        File outFile = new File(outNameFile);
+        List<Task> allTaskList = userTask.getArrayListTask().stream().collect(Collectors.toList());
+
+        if (outFile.exists()) {
+            return false;
+        }
+        try (BufferedWriter out = new BufferedWriter(new FileWriter(outFile))) {
+            for (Task t : allTaskList) {
+                out.write(t.toStringDataTask() + "\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public void importListTaskToFile(String inNameFile) {
+        /*чуть позже доделаю распарсивание строки и запись в Task*/
+        File inFile = new File(inNameFile);
+        String lineTask;
+        String[] stroka ;
+        String idTask;
+        try (BufferedReader in = new BufferedReader(new FileReader(inFile))) {
+            lineTask = in.readLine();
+            Pattern pat = Pattern.compile(":|,");
+
+            while (lineTask != null) {
+                stroka = pat.split(lineTask);
+                idTask = stroka[1].trim()+"1";
+                this.addTask(new Task(Long.parseLong(idTask), stroka[3].trim(), stroka[5].trim(), stroka[7].trim(),
+                        stroka[9].trim(), Task.StatusTask.valueOf(stroka[11].trim())));
+                lineTask = in.readLine();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
