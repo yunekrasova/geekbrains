@@ -12,5 +12,12 @@
         <maven.compiler.target>13</maven.compiler.target>
     </properties>
 
-
+<!--     https://mvnrepository.com/artifact/oracle/oracle-jdbc-->
+    <dependencies>
+    <dependency>
+        <groupId>com.oracle</groupId>
+        <artifactId>ojdbc</artifactId>
+        <version>8</version>
+    </dependency>
+    </dependencies>
 </project>
