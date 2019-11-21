@@ -52,6 +52,18 @@ public class Task {
         return statusTask;
     }
 
+    public String getOwnerTask() {
+        return ownerTask;
+    }
+
+    public String getExecuterTask() {
+        return executerTask;
+    }
+
+    public String getDescTask() {
+        return descTask;
+    }
+
     @Override
     public String toString() {
         return String.format("Задача ID:%d, название: %s, имя владельца задачи:%s, имя исполнителя: %s, описание: %s, статуc: %s.",

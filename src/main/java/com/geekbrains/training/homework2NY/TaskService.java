@@ -1,6 +1,7 @@
 package com.geekbrains.training.homework2NY;
 
 import com.geekbrains.training.homework2NY.exception.*;
+import com.geekbrains.training.homework2NY.lesson10.TaskToDataBase;
 
 import java.io.*;
 import java.util.List;
@@ -13,7 +14,8 @@ import java.util.stream.*;
  */
 public class TaskService {
     //   UserTask userTask = new TaskRepository();
-    UserTask userTask = new TaskArrayListRepository();
+  //  UserTask userTask = new TaskArrayListRepository();
+    UserTask userTask = new TaskToDataBase();
 
     public void TaskService() {
         prepareTask();
