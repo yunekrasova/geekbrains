@@ -1,9 +1,11 @@
 package com.geekbrains.tasktracker.entities;
 
+import com.geekbrains.tasktracker.entities.validation.TaskGroup;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "task")
@@ -39,15 +41,19 @@ public class Task {
     @Column(name = "id")
     private Long id;
 
+    @Size(min=4, max=100, message="Название должно быть не менее 4 символов и не более 100", groups = {TaskGroup.class})
     @Column(name = "caption")
     private String caption;
 
+    @Size(min=1, max=50, message="Описание не более 50 символов", groups = {TaskGroup.class})
     @Column(name = "owner")
     private String owner;
 
+    @Size(min=1, max=50, message="Описание не более 50 символов", groups = {TaskGroup.class})
     @Column(name = "assigned")
     private String assigned;
 
+    @Size(min=0, max=1000, message="Описание не более 1000 символов", groups = {TaskGroup.class})
     @Column(name = "description")
     private String description;
 
